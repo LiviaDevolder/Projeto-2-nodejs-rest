@@ -1,0 +1,18 @@
+{
+  "name": "Projeto-2-nodejs-rest",
+  "version": "1.0.0",
+  "description": "Projeto feito no curso NodeJS: Crie uma API REST padronizada e escalável",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.4"
+  }
+}
