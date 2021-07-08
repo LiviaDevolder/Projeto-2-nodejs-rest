@@ -13,6 +13,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use((requisicao, resposta, proximo) => {
+  resposta.set('X-Powered-By', 'Gatito Petshop')
+  proximo()
+})
+
+app.use((requisicao, resposta, proximo) => {
   let formatoRequisitado = requisicao.header('Accept')
 
   if(formatoRequisitado === '*/*') {
