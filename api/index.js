@@ -34,7 +34,15 @@ app.use((requisicao, resposta, proximo) => {
   proximo()
 })
 
+app.use((requisicao, resposta, proximo) => {
+  resposta.set('Access-Control-Allow-Origin', '*')
+  proximo()
+})
+
 app.use('/api/fornecedores', roteador)
+
+const roteadorV2 = require('./rotas/fornecedores/rotas.v2')
+app.use('/api/v2/fornecedores', roteadorV2)
 
 app.use((erro, requisicao, resposta, proximo) => {
   let status = 500
